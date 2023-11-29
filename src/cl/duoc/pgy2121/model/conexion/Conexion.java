@@ -16,7 +16,7 @@ public class Conexion {
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pgy2121", 
                                                      "root", 
-                                                     "root");
+                                                     "Informatica.23");
             System.out.println("Conexión exitosa");
         } catch (SQLException e) {
             System.out.println("Error de conexión" + e.getMessage());

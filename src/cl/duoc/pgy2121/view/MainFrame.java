@@ -38,6 +38,9 @@ public class MainFrame extends javax.swing.JFrame {
         add(buscarUsuarioPanel);
         add(crearUsuarioPanel);
         add(modificarUsuarioPanel);
+        setLocationRelativeTo(null);
+        setSize(500, 400);
+        setTitle("Ejercicio Repaso PGY2121");
     }
 
     /**
@@ -112,12 +115,14 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
+        buscarUsuarioPanel.setVisible(false);
         modificarUsuarioPanel.setVisible(false);
         crearUsuarioPanel.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+        buscarUsuarioPanel.setVisible(false);
         crearUsuarioPanel.setVisible(false);
         modificarUsuarioPanel.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
@@ -125,6 +130,8 @@ public class MainFrame extends javax.swing.JFrame {
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         buscarUsuarioPanel.setVisible(true);
+        crearUsuarioPanel.setVisible(false);
+        modificarUsuarioPanel.setVisible(false);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**

@@ -51,7 +51,7 @@ public class UsuarioDAO implements IGenericDAO{
         
         List<Usuario> listaUsuarios = new ArrayList<>();
         try {
-            String query = "SELECT usuario, password, correo " +
+            String query = "SELECT id, usuario, password, correo " +
                            "FROM usuario";
              Conexion conexion = new Conexion();
              Statement stmt  = conexion.obtenerConexion().createStatement();
@@ -59,11 +59,13 @@ public class UsuarioDAO implements IGenericDAO{
            
             // loop through the result set
             while (rs.next()) {
+                int    id       = rs.getInt("id");
                 String username = rs.getString("usuario");
                 String password = rs.getString("password");
                 String correo   = rs.getString("correo");
                
                 Usuario usuario = new Usuario();
+                usuario.setId(id);
                 usuario.setUsuario(username);
                 usuario.setPassword(password);
                 usuario.setCorreo(correo);
